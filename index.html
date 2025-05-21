@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="weather-app" role="main">
+        <header>
+            <h1>Weather Checker</h1>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">🌙</button>
+        </header>
+        <section class="search-section">
+            <input id="city-input" type="text" placeholder="Search city..." aria-label="City name" autocomplete="off">
+            <button id="search-btn" aria-label="Search"><span>🔍</span></button>
+            <button id="location-btn" aria-label="Use current location"><span>📍</span></button>
+        </section>
+        <section class="weather-card glass">
+            <div class="loader" id="loading-spinner"></div>
+            <div id="weather-info" class="weather-info" aria-live="polite">
+                <div class="main-info">
+                    <div class="location">
+                        <h2 id="city">--</h2>
+                        <span id="country">--</span>
+                    </div><br>
+                    <div class="date-time">
+                        <span id="date">--</span>
+                        <span id="time">--</span>
+                    </div>
+                </div>
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div>
+                        <span id="temp" class="temp">--°C</span>
+                        <button id="temp-toggle" aria-label="Toggle temperature unit">°C/°F</button>
+                    </div>
+                </div>
+                <div class="weather-desc" id="weather-desc">--</div>
+                <div class="weather-details">
+                    <div><span>💧</span> <span id="humidity">--%</span></div>
+                    <div><span>💨</span> <span id="wind">-- km/h</span></div>
+                    <div><span>🔽</span> <span id="pressure">-- hPa</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="forecast glass">
+            <h3>4-Day Forecast</h3>
+            <div id="forecast-container" class="forecast-container"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
